@@ -9,3 +9,8 @@ export const tweetListState = atom({
     key: 'tweetListState',
     default: [],
 });
+
+export const popupState = atom({
+    key: "popupState",
+    default: false
+  })
