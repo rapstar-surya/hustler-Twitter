@@ -1,0 +1,63 @@
+.mainDiv{
+    border: 1px solid;
+}
+.secondDiv{
+    display: flex;
+    margin-left: 2%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.aniImg{
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    
+}
+.verified{
+    width: 15px;
+    height: 15px;
+
+}
+.reactIcon{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+    /* width: 12rem; */
+}
+.postImage{
+    margin-left: 5rem;
+    width: 30rem;
+}
+.para{
+    /* style={{ marginLeft: "5rem", fontSize: "1rem" }} */
+    margin-left: 5rem;
+    margin-right: 3rem;
+    font: 1em sans-serif;
+}
+
+.createdAtTime{
+    margin-left: 5px;
+}
+.liked {
+    color: red;
+}
+@media only screen and (max-width: 1023px) {
+    /* CSS rules for mobile devices go here */
+    .createdAtTime {
+      display: none;
+    }
+
+    .postImage{
+        margin-left: 5rem;
+        width: 15rem;
+    }
+  }
+  
+/* .rightSideBar {
+  position: sticky;
+}
+
+.sideCards {
+  position: sticky;
+  top: -8rem;
+} */
