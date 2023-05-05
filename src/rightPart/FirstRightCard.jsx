@@ -13,7 +13,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Dialog from "@mui/material/Dialog";
 import { blue } from "@mui/material/colors";
-import { popupState } from "../atoms/atoms";
+import {popupState,  popupState1, popupState2, popupState3  } from "../atoms/atoms";
 import { useRecoilState } from "recoil";
 
 const trend = [
@@ -42,32 +42,40 @@ export default function FirstRightCard() {
           />
         </div>
       </div>
-      <Trending limit={3} />
+      <Trending />
     </div>
   );
 }
 
-function Trending({ limit }) {
+function Trending() {
   const [displayedTrends, setDisplayedTrends] = useState(trend);
 
-  const handleRemoveTrend = (trendToRemove) => {
-    console.log("Removing trend:", trendToRemove);
+  const handleRemoveTrend = (indexToRemove) => {
+    console.log("Removing trend:", displayedTrends[indexToRemove]);
     const filteredTrends = displayedTrends.filter(
-      (trend) => trend !== trendToRemove
+      (trend, index) => index !== indexToRemove
     );
     setDisplayedTrends(filteredTrends);
   };
 
   return (
     <>
-      {displayedTrends.slice(0, limit).map((ele, i) => (
+      {displayedTrends.map((ele, i) => (
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
             <span className={rightCard.textGrey}>
               Trending in {ele.country_name}
             </span>
             <span>
-              <SimpleDialogDemo onRemove={() => handleRemoveTrend(ele)} />
+              {i === 0 && (
+                <SimpleDialogDemo onRemove={() => handleRemoveTrend(i)} popupState={popupState1} />
+              )}
+              {i === 1 && (
+                <SimpleDialogDemo onRemove={() => handleRemoveTrend(i)} popupState={popupState2} />
+              )}
+              {i === 2 && (
+                <SimpleDialogDemo onRemove={() => handleRemoveTrend(i)} popupState={popupState3} />
+              )}
             </span>
           </div>
 
@@ -75,7 +83,7 @@ function Trending({ limit }) {
           <span className={rightCard.textGrey}>{ele.tweet_counts}K Tweets</span>
         </div>
       ))}
-      {displayedTrends.length < limit ? null : (
+      {displayedTrends.length < 3 ? null : (
         <span className={rightCard.anch}>Show more</span>
       )}
     </>
@@ -141,7 +149,7 @@ SimpleDialog.propTypes = {
   selectedValue: PropTypes.string.isRequired,
 };
 
-function SimpleDialogDemo({ onRemove }) {
+function SimpleDialogDemo({  onRemove, popupState  }) {
   const [open, setOpen] = useRecoilState(popupState);
   const [selectedValue, setSelectedValue] = useState(optionsPopup[1]);
 
