@@ -18,11 +18,11 @@ export default function MiddleThirdPost() {
         <div key={i} className={MiddleThird.mainDiv}>
         <div className={MiddleThird.secondDiv}>
           <img
-            src="https://pbs.twimg.com/profile_images/1497864299/ani_mic_logo_400x400.jpg"
-            alt="ANI"
+            src="https://randomuser.me/api/portraits/thumb/men/9.jpg"
+            alt="profile-pic"
             className={MiddleThird.aniImg}
           />
-          <h4 style={{ marginTop: "0", marginLeft: "1rem" }}>ANI</h4>
+          <h4 style={{ marginTop: "0", marginLeft: "1rem" }}>Suraj Chaudhari</h4>
           <span>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/800px-Twitter_Verified_Badge.svg.png"
@@ -30,7 +30,7 @@ export default function MiddleThirdPost() {
               className={MiddleThird.verified}
             />
           </span>
-          <span style={{ marginLeft: "5px" }}>@ANI</span>
+          <span style={{ marginLeft: "5px" }}>@suraj_chaudhari</span>
           <span style={{ marginLeft: "5px" }}> - 1 minutes ago</span>
         </div>
         <div>

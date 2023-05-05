@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Logout.module.css";
 import { useState } from "react";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
@@ -33,7 +34,7 @@ export function Logout() {
     setOpenLogoutDialog(false);
     if (logoutConfirmed) {
       localStorage.setItem("isLogin", JSON.stringify(false));
-      navigate("/login");
+      navigate("/");
     }
   };
 

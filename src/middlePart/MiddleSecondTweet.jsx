@@ -26,7 +26,7 @@ export default function MiddleSecondTweet() {
     <div className={MiddleSecond.middleMainDiv}>
       <div className={MiddleSecond.firstMiddleDiv}>
         <img
-          src="https://pbs.twimg.com/profile_images/1497864299/ani_mic_logo_400x400.jpg"
+          src="https://randomuser.me/api/portraits/thumb/men/9.jpg"
           alt="profileImage"
           className={MiddleSecond.MiddleProfileImg}
         />
