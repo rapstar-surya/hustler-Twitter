@@ -17,10 +17,10 @@ import { popupState } from "../atoms/atoms";
 import { useRecoilState } from "recoil";
 
 const trend = [
-    {"states_name":"Porto","country_name":"Portugal","tweet_counts":52},
-    {"states_name":"Stockholm","country_name":"Sweden","tweet_counts":49},
-    {"states_name":"Alberta","country_name":"Canada","tweet_counts":43},
-    ]
+  { states_name: "Porto", country_name: "Portugal", tweet_counts: 52 },
+  { states_name: "Stockholm", country_name: "Sweden", tweet_counts: 49 },
+  { states_name: "Alberta", country_name: "Canada", tweet_counts: 43 },
+];
 
 export default function FirstRightCard() {
   return (
@@ -48,31 +48,41 @@ export default function FirstRightCard() {
 }
 
 function Trending({ limit }) {
+  const [displayedTrends, setDisplayedTrends] = useState(trend);
+
+  const handleRemoveTrend = (trendToRemove) => {
+    console.log("Removing trend:", trendToRemove);
+    const filteredTrends = displayedTrends.filter(
+      (trend) => trend !== trendToRemove
+    );
+    setDisplayedTrends(filteredTrends);
+  };
 
   return (
     <>
-      {trend.map((ele, i) => (
+      {displayedTrends.slice(0, limit).map((ele, i) => (
         <div key={ele.tweet_counts}>
           <div className={rightCard.trend}>
-            <span className={rightCard.textGrey}>Trending in {ele.country_name}</span>
-            <span><SimpleDialogDemo/></span>
+            <span className={rightCard.textGrey}>
+              Trending in {ele.country_name}
+            </span>
+            <span>
+              <SimpleDialogDemo onRemove={() => handleRemoveTrend(ele)} />
+            </span>
           </div>
 
-          <p className={rightCard.thirdHead}> #{ele.states_name}</p>
+          <p className={rightCard.thirdHead}>#{ele.states_name}</p>
           <span className={rightCard.textGrey}>{ele.tweet_counts}K Tweets</span>
         </div>
       ))}
-       {trend.length < limit ? null : (
-        <span className={rightCard.anch}>
-        Show more
-      </span>
+      {displayedTrends.length < limit ? null : (
+        <span className={rightCard.anch}>Show more</span>
       )}
     </>
   );
 }
 
 // ----------------------------------------------------------------------------------------------------
-
 
 const optionsPopup = [
   "Not interested in this",
@@ -110,9 +120,7 @@ function SimpleDialog(props) {
       >
         {optionsPopup.map((popOpt, i) => (
           <ListItem key={i} disableGutters>
-            <ListItemButton
-              key={popOpt}
-            >
+            <ListItemButton onClick={() => handleClose(popOpt)} key={popOpt}>
               <ListItemAvatar>
                 <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
                   ☹️
@@ -133,7 +141,7 @@ SimpleDialog.propTypes = {
   selectedValue: PropTypes.string.isRequired,
 };
 
-function SimpleDialogDemo() {
+function SimpleDialogDemo({ onRemove }) {
   const [open, setOpen] = useRecoilState(popupState);
   const [selectedValue, setSelectedValue] = useState(optionsPopup[1]);
 
@@ -144,6 +152,14 @@ function SimpleDialogDemo() {
   const handleClose = (value) => {
     setOpen(false);
     setSelectedValue(value);
+
+    if (
+      value === "Not interested in this" ||
+      value === "This trend is harmful or spammy"
+    ) {
+      console.log("Removing trend due to user selection:", value);
+      onRemove();
+    }
   };
 
   return (
