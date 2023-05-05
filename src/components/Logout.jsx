@@ -4,20 +4,37 @@ import { BiDotsHorizontalRounded } from "react-icons/bi";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
 
 export function Logout() {
-//   const navigate = useNavigate();
-
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
+  const [openLogoutDialog, setOpenLogoutDialog] = useState(false);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
-    localStorage.setItem("isLogin", JSON.stringify(false));
-    // navigate("/login");
+    setAnchorEl(null);
+  };
+
+  const handleLogoutDialogOpen = () => {
+    setOpenLogoutDialog(true);
+    handleClose();
+  };
+
+  const handleLogoutDialogClose = (logoutConfirmed) => {
+    setOpenLogoutDialog(false);
+    if (logoutConfirmed) {
+      localStorage.setItem("isLogin", JSON.stringify(false));
+      navigate("/login");
+    }
   };
 
   return (
@@ -27,7 +44,7 @@ export function Logout() {
           className={styles.imgOut}
           src="https://randomuser.me/api/portraits/thumb/men/9.jpg"
           alt="pic"
-          onClick={handleClose}
+          onClick={handleLogoutDialogOpen}
         />
         <div className={styles.userContainer}>
           <span className={styles.userName}>Suraj Chaudhari</span>
@@ -57,11 +74,21 @@ export function Logout() {
           <MenuItem className={styles.menuItem}>
             Add an existing account
           </MenuItem>
-          <MenuItem className={styles.menuItem} onClick={handleClose}>
+          <MenuItem className={styles.menuItem} onClick={handleLogoutDialogOpen}>
             Logout @suraj_chaudhari
           </MenuItem>
         </Menu>
       </div>
+      <Dialog open={openLogoutDialog} onClose={() => handleLogoutDialogClose(false)}>
+        <DialogTitle>Logout Confirmation</DialogTitle>
+        <DialogContent>
+          Are you sure you want to log out?
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => handleLogoutDialogClose(false)}>Cancel</Button>
+          <Button onClick={() => handleLogoutDialogClose(true)}>Logout</Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
