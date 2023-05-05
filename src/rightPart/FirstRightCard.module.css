@@ -1,0 +1,62 @@
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-self: space-between;
+    width: 22.5vw;
+    border: none;
+    border-radius: 5%;
+    padding: 1rem;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    max-height: 40rem;
+    margin-bottom:0.5rem
+}
+
+.firstDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.head2 {
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.textGrey {
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .7rem;
+}
+
+.headThree{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.imgPic{
+    border-radius: 30%;
+}
+
+.anch{
+    font-size: large;
+    color: rgba(0, 136, 255, 0.639);
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.trend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thirdHead{
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.para{
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

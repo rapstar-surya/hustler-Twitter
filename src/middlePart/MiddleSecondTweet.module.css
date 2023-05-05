@@ -1,0 +1,73 @@
+.middleMainDiv{
+    border: 1px solid white;
+}
+.firstMiddleDiv{
+    display: flex;
+    margin-left: 2%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.MiddleProfileImg{
+    width: 58px;
+    height: 58px;
+    border-radius: 50px;
+    
+}
+.MiddleTextarea{
+    margin-left: 1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 32rem;
+    height: 5rem;
+    font-size: larger;
+}
+.reactIcon{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+    width: 12rem;
+}
+/* .tweetBtn{
+    margin-left: 17rem;
+    padding: 30px;
+} */
+.btn{
+    margin-left: 15rem;
+    padding: 12px;
+    width: 6rem;
+    border-radius: 50px;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.594);
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1023px) {
+    /* CSS rules for mobile devices go here */
+    .reactIcon{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+        width: 12rem;
+    }
+
+    .btn{
+        margin-left: 3rem;
+        padding: 12px;
+        width: 6rem;
+        border-radius: 50px;
+        color: white;
+        background-color: rgba(0, 0, 255, 0.594);
+        margin-bottom: 1rem;
+    }
+
+    .MiddleTextarea{
+        margin: 0 1rem;
+        color: white;
+        background-color: black;
+        border: none;
+        width: 32rem;
+        height: 5rem;
+        font-size: larger;
+    }
+  }
