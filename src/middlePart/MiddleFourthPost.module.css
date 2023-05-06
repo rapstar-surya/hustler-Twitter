@@ -22,14 +22,12 @@
     display: flex;
     justify-content: space-between;
     margin: 0 5rem;
-    /* width: 12rem; */
 }
 .postImage{
     margin-left: 5rem;
     width: 30rem;
 }
 .para{
-    /* style={{ marginLeft: "5rem", fontSize: "1rem" }} */
     margin-left: 5rem;
     margin-right: 3rem;
     font: 1em sans-serif;
@@ -53,11 +51,3 @@
     }
   }
   
-/* .rightSideBar {
-  position: sticky;
-}
-
-.sideCards {
-  position: sticky;
-  top: -8rem;
-} */

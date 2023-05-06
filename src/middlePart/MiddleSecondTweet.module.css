@@ -1,5 +1,5 @@
 .middleMainDiv{
-    border: 1px solid white;
+    border: 1px solid;
 }
 .firstMiddleDiv{
     display: flex;
@@ -28,10 +28,7 @@
     margin-left: 5rem;
     width: 12rem;
 }
-/* .tweetBtn{
-    margin-left: 17rem;
-    padding: 30px;
-} */
+
 .btn{
     margin-left: 15rem;
     padding: 12px;

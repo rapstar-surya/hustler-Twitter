@@ -47,7 +47,7 @@ export default function MiddleFourthPost() {
           <div key={ele.id} className={middleFourth.mainDiv}>
             <div className={middleFourth.secondDiv}>
               <img
-                src="https://randomuser.me/api/portraits/thumb/women/3.jpg"
+                src={`https://randomuser.me/api/portraits/thumb/women/${i}.jpg`}
                 alt="profile-pic"
                 className={middleFourth.aniImg}
               />

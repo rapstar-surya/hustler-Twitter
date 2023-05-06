@@ -4,13 +4,6 @@ import Home from "./section/Home";
 import Login from "./components/Login";
 import Register from "./components/register/Register";
 
-// const ProtectedRoute = () => {
-//   const token = localStorage.getItem("isLogin");
-//   if (token == true) {
-//   } else {
-//   }
-// };
-
 export default function App() {
   return (
     <>
@@ -33,3 +26,4 @@ export default function App() {
     </>
   );
 }
+

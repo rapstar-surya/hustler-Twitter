@@ -52,7 +52,7 @@ function Navbar() {
           Tweet
         </Button>
         <Dialog className="dialog" open={open} onClose={handleClose}>
-          <DialogTitle className="dialogTitle">Subscribe</DialogTitle>
+          {/* <DialogTitle className="dialogTitle">Subscribe</DialogTitle> */}
           <DialogContent className="dialogContent">
             <DialogContentText className="dialogContentText">
 
