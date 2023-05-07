@@ -1,9 +1,9 @@
 import "./SidebarOption.css";
 
 // eslint-disable-next-line react/prop-types
-function SidebarOption({ active, text, Icon }) {
+function SidebarOption({ text, Icon }) {
   return (
-    <div className={`sidebarOption ${active && "sidebarOption--active"}`}>
+    <div className={`sidebarOption`}>
       <Icon />
       <h2 className="text">{text}</h2>
     </div>

@@ -39,20 +39,3 @@ export default function MiddleFirst() {
   );
 }
 
-
-// import React from 'react'
-// import middleFirst from './MiddleFirst.module.css'
-
-// export default function MiddleFirst() {
-//   return (
-//     <div className={middleFirst.mainDiv}>
-//       <h1>Home</h1>
-
-//       <div className={middleFirst.secondDiv}>
-//         <h3>For you</h3>
-//         <h3>Following</h3>
-//       </div>
-
-//     </div>
-//   )
-// }
