@@ -1,4 +1,6 @@
 import React from "react";
+import home from './Home.module.css'
+
 import Grid from "@mui/material/Grid";
 import MiddleFirst from "../middlePart/MiddleFirst";
 import MiddleSecondTweet from "../middlePart/MiddleSecondTweet";
@@ -10,9 +12,10 @@ import FirstRightCard from "../rightPart/FirstRightCard";
 import SecondRightCard from "../rightPart/SecondRightCard";
 
 export default function Home() {
+
   return (
     <Grid container spacing={2}>
-      <Grid item md={3}>
+      <Grid item md={3} >
         <Navbar />
       </Grid>
 
@@ -23,7 +26,7 @@ export default function Home() {
         <MiddleFourthPost />
       </Grid>
 
-      <Grid item md={4}>
+      <Grid item md={4} className={home.hide}>
         <SearchBar />
         <div style={{position:'sticky', top:'-8rem'}}>
           <FirstRightCard />
@@ -31,5 +34,6 @@ export default function Home() {
         </div>
       </Grid>
     </Grid>
+
   );
 }

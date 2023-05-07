@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import middleFirst from "./MiddleFirst.module.css";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
@@ -6,7 +6,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 
 export default function MiddleFirst() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -39,20 +39,3 @@ export default function MiddleFirst() {
   );
 }
 
-
-// import React from 'react'
-// import middleFirst from './MiddleFirst.module.css'
-
-// export default function MiddleFirst() {
-//   return (
-//     <div className={middleFirst.mainDiv}>
-//       <h1>Home</h1>
-
-//       <div className={middleFirst.secondDiv}>
-//         <h3>For you</h3>
-//         <h3>Following</h3>
-//       </div>
-
-//     </div>
-//   )
-// }

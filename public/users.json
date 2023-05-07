@@ -1,5 +1,37 @@
-[{"id":1,"first_name":"Lin","last_name":"Dufoure","user_name":"ldufoure0"},
-{"id":2,"first_name":"Allin","last_name":"Leil","user_name":"aleil1"},
-{"id":3,"first_name":"Ring","last_name":"How","user_name":"rhow2"},
-{"id":4,"first_name":"Phyllys","last_name":"De Winton","user_name":"pdewinton3"},
-{"id":5,"first_name":"Sanford","last_name":"De Gregorio","user_name":"sdegregorio4"}]
+[
+  {
+    "id": 1,
+    "first_name": "Jasmine",
+    "last_name": "Dufoure",
+    "user_name": "jasmine2",
+    "image": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+  },
+  {
+    "id": 2,
+    "first_name": "Robert",
+    "last_name": "McMahon",
+    "user_name": "mr_robert",
+    "image": "https://randomuser.me/api/portraits/thumb/men/11.jpg"
+  },
+  {
+    "id": 3,
+    "first_name": "Stephanie",
+    "last_name": "Biden",
+    "user_name": "i_am_angel",
+    "image": "https://randomuser.me/api/portraits/thumb/women/19.jpg"
+  },
+  {
+    "id": 4,
+    "first_name": "Phyllys",
+    "last_name": "De Winton",
+    "user_name": "pdewinton3",
+    "image": "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+  },
+  {
+    "id": 5,
+    "first_name": "Sanford",
+    "last_name": "De Gregorio",
+    "user_name": "sdegregorio4",
+    "image": "https://randomuser.me/api/portraits/thumb/women/19.jpg"
+  }
+]

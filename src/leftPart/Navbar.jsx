@@ -15,7 +15,7 @@ import { Button } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+
 import MiddleSecondTweet from "../middlePart/MiddleSecondTweet";
 import { Logout } from "../components/Logout";
 
@@ -33,7 +33,7 @@ function Navbar() {
     <div className="sidebar">
       <TwitterIcon className="sidebar__twitterIcon" />
 
-      <SidebarOption active Icon={HomeIcon} text="Home" />
+      <SidebarOption Icon={HomeIcon} text="Home" />
       <SidebarOption Icon={SearchIcon} text="Explore" />
       <SidebarOption Icon={NotificationsNoneIcon} text="Notification" />
       <SidebarOption Icon={MailOutlineIcon} text="Messages" />
@@ -52,7 +52,7 @@ function Navbar() {
           Tweet
         </Button>
         <Dialog className="dialog" open={open} onClose={handleClose}>
-          <DialogTitle className="dialogTitle">Subscribe</DialogTitle>
+          
           <DialogContent className="dialogContent">
             <DialogContentText className="dialogContentText">
 

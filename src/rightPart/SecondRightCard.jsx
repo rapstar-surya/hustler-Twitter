@@ -58,8 +58,8 @@ function Trending({ limit }) {
           <div className={secondRightCard.imgUserDiv}>
             <img
               className={secondRightCard.imgPic}
-              src="https://picsum.photos/60/60?q=12"
-              alt=""
+              src={user.image}
+              alt="user-image"
             />
             <div className={secondRightCard.userName}>
             <span className={secondRightCard.userName}>
